@@ -1,17 +1,17 @@
 {
-    "name": "ibtur-config-plugin",
+    "name": "cordova-plugin-ibtur",
     "version": "1.0.0",
-    "description": "Plugin para configurações do build nativo da app ibtur mobile",
+    "description": "Cordova IBTUR Plugin",
     "author": "Anderson Davi <adavi@itaipu.gov.br>",
     "cordova": {
-        "id": "ibtur-config-plugin",
+        "id": "cordova-plugin-ibtur",
         "platforms": [
             "ios"
         ]
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/itaipubinacional/ibtur-config-plugin.git"
+        "url": "https://github.com/itaipubinacional/cordova-plugin-ibtur.git"
     },
     "keywords": [],
     "engines": {

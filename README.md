@@ -1,1 +1,1 @@
-# ibtur-config-plugin
+# cordova-plugin-ibtur
