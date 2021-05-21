@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="ibtur-config-plugin"
+    version="1.0.0">
+    
+    <name>IBTur Mobile Config</name>
+    <description>
+        Configurações para o build da app IBTur
+    </description>
+    <author>Anderson Davi - adavi@itaipu.gov.br</author>
+    <keywords></keywords>
+    <license></license>
+    
+    <engines>
+        <!-- Requires > 3.3.* because of the custom Framework tag for iOS [CB-5238] -->
+        <!-- Requires > 3.5.0 because of the custom Framework tag for Android [CB-6698] -->
+        <engine name="cordova" version=">=3.5.0" />
+    </engines>
+    
+    <!-- ios -->
+    <platform name="ios">
+        
+        <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
+            <string>Accedemos a tu ubicación para ofrecerte una mejor experiencia. Tu ubicación solo será utilizada para mostrarlo en los mapas.</string>
+        </config-file>
+        
+        <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+            <string>Accedemos a tu ubicación para ofrecerte una mejor experiencia. Tu ubicación solo será utilizada para mostrarlo en los mapas.</string>
+        </config-file>
+        
+        <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
+            <string>Permitir acceder a tu librería de fotos para seleccionar y mostrar una imagen en tu perfil.</string>
+        </config-file>
+
+        <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+            <string>Permitir acceder a tu cámara para que puedas tomar una foto y mostrar en tu perfil.</string>
+        </config-file>
+
+        <!--
+        <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription">
+            <string>This app requires microphone access to function properly.</string>
+        </config-file>
+
+        <config-file target="*-Info.plist" parent="NSPhotoLibraryAddUsageDescription">
+            <string>We access your photo library to save pictures.</string>
+        </config-file>
+        -->
+
+    </platform>
+    
+</plugin>
