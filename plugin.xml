@@ -18,7 +18,15 @@
         <engine name="cordova" version=">=3.5.0" />
     </engines>
     
-    <!-- ios -->
+    <platform name="android">
+
+        <edit-config file="res/values/facebookconnect.xml" target="/*" mode="overwrite">
+            <string name="fb_app_id">$APP_ID</string>
+            <string name="fb_app_name">$APP_NAME</string>
+        </edit-config>
+
+    </platform>
+
     <platform name="ios">
         
         <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
@@ -51,9 +59,19 @@
         </config-file>
         -->
 
+        <preference name="FACEBOOK_APP_ID" />
+        <preference name="FACEBOOK_APP_NAME" />
         <preference name="REVERSED_CLIENT_ID" />
 
-        <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+        <config-file target="*-Info.plist" parent="FacebookAppID">
+            <string>$FACEBOOK_APP_ID</string>
+        </config-file>
+        
+        <config-file target="*-Info.plist" parent="FacebookDisplayName">
+            <string>$FACEBOOK_APP_NAME</string>
+        </config-file>
+        
+        <edit-config file="*-Info.plist" target="CFBundleURLTypes" mode="overwrite">
             <array>
                 <dict>
                     <key>CFBundleTypeRole</key>
@@ -65,8 +83,14 @@
                         <string>$REVERSED_CLIENT_ID</string>
                     </array>
                 </dict>
+                <dict>
+                    <key>CFBundleURLSchemes</key>
+                    <array>
+                    <string>fb$FACEBOOK_APP_ID</string>
+                    </array>
+                </dict>
             </array>
-        </config-file>
+        </edit-config>
 
     </platform>
     
