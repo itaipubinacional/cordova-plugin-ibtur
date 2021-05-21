@@ -36,6 +36,10 @@
         <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
             <string>Permitir acceder a tu cámara para que puedas tomar una foto y mostrar en tu perfil.</string>
         </config-file>
+        
+        <config-file target="*-Info.plist" parent="NSBluetoothPeripheralUsageDescription">
+            <string>Se utiliza el bluetooth del dispositivo para reconocer los dispositivos beacons cercanos.</string>
+        </config-file>
 
         <!--
         <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription">
