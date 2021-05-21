@@ -20,14 +20,21 @@
     
     <platform name="android">
 
+        <preference name="FACEBOOK_APP_ID" />
+        <preference name="FACEBOOK_APP_NAME" />
+
         <edit-config file="res/values/facebookconnect.xml" target="/*" mode="overwrite">
-            <string name="fb_app_id">$APP_ID</string>
-            <string name="fb_app_name">$APP_NAME</string>
+            <string name="fb_app_id">$FACEBOOK_APP_ID</string>
+            <string name="fb_app_name">$FACEBOOK_APP_NAME</string>
         </edit-config>
 
     </platform>
 
     <platform name="ios">
+
+        <preference name="FACEBOOK_APP_ID" />
+        <preference name="FACEBOOK_APP_NAME" />
+        <preference name="REVERSED_CLIENT_ID" />
         
         <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
             <string>Accedemos a tu ubicación para ofrecerte una mejor experiencia. Tu ubicación solo será utilizada para mostrarlo en los mapas.</string>
@@ -58,10 +65,6 @@
             <string>We access your photo library to save pictures.</string>
         </config-file>
         -->
-
-        <preference name="FACEBOOK_APP_ID" />
-        <preference name="FACEBOOK_APP_NAME" />
-        <preference name="REVERSED_CLIENT_ID" />
 
         <config-file target="*-Info.plist" parent="FacebookAppID">
             <string>$FACEBOOK_APP_ID</string>
