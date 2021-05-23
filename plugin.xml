@@ -22,13 +22,11 @@
 
         <preference name="FACEBOOK_APP_ID" />
         <preference name="FACEBOOK_APP_NAME" />
-
-        <edit-config file="res/values/facebookconnect.xml" target="/resources/string[@android:name='fb_app_id']" mode="merge">
+        
+        <config-file target="res/values/facebookconnect.xml" parent="/*">
             <string name="fb_app_id">$FACEBOOK_APP_ID</string>
-        </edit-config>
-        <edit-config file="res/values/facebookconnect.xml" target="/resources/string[@android:name='fb_app_name']" mode="merge">
             <string name="fb_app_name">$FACEBOOK_APP_NAME</string>
-        </edit-config>
+        </config-file>
 
     </platform>
 
@@ -36,7 +34,7 @@
 
         <preference name="FACEBOOK_APP_ID" />
         <preference name="FACEBOOK_APP_NAME" />
-        <preference name="REVERSED_CLIENT_ID" />
+        <preference name="GOOGLE_REVERSED_CLIENT_ID" />
         
         <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
             <string>Accedemos a tu ubicación para ofrecerte una mejor experiencia. Tu ubicación solo será utilizada para mostrarlo en los mapas.</string>
@@ -85,7 +83,7 @@
                     <string>REVERSED_CLIENT_ID</string>
                     <key>CFBundleURLSchemes</key>
                     <array>
-                        <string>$REVERSED_CLIENT_ID</string>
+                        <string>$GOOGLE_REVERSED_CLIENT_ID</string>
                     </array>
                 </dict>
                 <dict>
