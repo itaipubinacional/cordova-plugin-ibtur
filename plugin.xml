@@ -55,6 +55,10 @@
         <config-file target="*-Info.plist" parent="NSBluetoothPeripheralUsageDescription">
             <string>Se utiliza el bluetooth del dispositivo para reconocer los dispositivos beacons cercanos.</string>
         </config-file>
+        
+        <config-file target="*-Info.plist" parent="NSBluetoothAlwaysUsageDescription">
+            <string>Se utiliza el bluetooth del dispositivo para reconocer los dispositivos beacons cercanos.</string>
+        </config-file>
 
         <!--
         <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription">
